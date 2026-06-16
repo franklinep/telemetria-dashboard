@@ -1,6 +1,3 @@
-// Catálogo del protocolo binario del Rover Rojo (Informe_Telemetria_ESP32S3_v1.docx §2).
-// Frame: 0xAA | MSG_ID | LEN | PAYLOAD | CRC8  (big-endian, CRC-8/SMBUS 0x07).
-
 export type MsgName = 'SYS' | 'IMU' | 'BAT' | 'GPS' | 'ENV' | 'BMS';
 
 export interface MessageSpec {
