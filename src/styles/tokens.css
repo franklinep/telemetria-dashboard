@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* Paleta de marca: negro cálido + amarillo #FACC15 (terrabotsrover.netlify.app).
+   Los acentos semánticos codifican estado de datos, no marca. */
+:root {
+  /* Fuentes */
+  --font-ui: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+
+  /* Marca TerraBots */
+  --brand-yellow: #FACC15;
+  --brand-yellow-bright: #F7D13C;
+  --brand-yellow-soft: rgba(250, 204, 21, 0.15);
+  --brand-navbar: #2F3A4D;
+
+  /* Chrome (toolbar/titlebar/statusbar — negro cálido TerraBots) */
+  --chrome-bg-top: #16140D;
+  --chrome-bg-bottom: #0E0E0E;
+  --chrome-border: #000000;
+  --chrome-border-soft: #2A2620;
+  --chrome-text: #FFFFFF;
+  --chrome-text-muted: #A1A7B2;
+  --chrome-text-disabled: #6B6E76;
+  --chrome-accent: var(--brand-yellow);
+
+  /* Lienzo de fondo (estética marciana) */
+  --canvas-bg: #0A0A0A;
+  --canvas-gradient: linear-gradient(135deg, #0E0E0E 0%, #131005 50%, #0E0E0E 100%);
+  --canvas-dots: radial-gradient(circle, rgba(250, 204, 21, 0.05) 1px, transparent 1px);
+
+  /* Paneles light (datos densos, legibilidad) */
+  --panel-header-bg: #D6D8DB;
+  --panel-bg: #EBECEE;
+  --panel-inner-bg: #FAFAFA;
+  --panel-border: #C0C3C8;
+  --panel-grid-line: #D9DBDF;
+  --panel-text: #1A1B1F;
+
+  /* Paneles dark (negro cálido TerraBots) */
+  --panel-dark-header-bg: #1C1A14;
+  --panel-dark-bg: #121110;
+  --panel-dark-inner-bg: #0B0A08;
+  --panel-dark-border: #2A2620;
+  --panel-dark-grid-line: #2A2C32;
+  --panel-dark-text: #E8E9EA;
+  --panel-dark-text-secondary: #A1A7B2;
+
+  /* Acentos semánticos (estado de datos) */
+  --accent-blue: #1B86F3;
+  --accent-green: #22C55E;
+  --accent-red: #E74C3C;
+  --accent-orange: #F97316;
+  --accent-yellow: #FACC15;
+  --accent-purple: #A855F7;
+  --accent-pink: #D946EF;
+  --accent-cyan: #0EA5E9;
+
+  /* Acento primario de marca */
+  --accent-primary: var(--brand-yellow);
+
+  /* Spacing (base 2px) */
+  --sp-1: 2px;  --sp-2: 4px;  --sp-3: 6px;  --sp-4: 8px;
+  --sp-5: 12px; --sp-6: 16px; --sp-7: 20px; --sp-8: 24px;
+  --sp-9: 32px; --sp-10: 40px; --sp-11: 48px; --sp-12: 64px;
+
+  /* Radius */
+  --radius-sm: 3px; --radius-md: 5px; --radius-lg: 8px;
+  --radius-xl: 12px; --radius-pill: 999px;
+}

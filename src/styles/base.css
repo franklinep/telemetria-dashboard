@@ -1,0 +1,116 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #app {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: var(--font-ui);
+  background: var(--canvas-bg);
+  color: var(--chrome-text);
+  font-size: 12px;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Layout raíz de la app */
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: var(--canvas-bg);
+}
+
+.app__content {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Lienzo con estética marciana TerraBots: gradiente cálido + patrón de puntos dorados */
+.view-canvas {
+  height: 100%;
+  background-color: var(--canvas-bg);
+  background-image: var(--canvas-dots);
+  background-size: 22px 22px;
+}
+
+.view-canvas--dark {
+  background-image: var(--canvas-gradient), var(--canvas-dots);
+  background-size: 100% 100%, 22px 22px;
+}
+
+/* Pantalla de carga */
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-4);
+  height: 100vh;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--chrome-text-muted);
+}
+
+/* Banda de error */
+.error-bar {
+  background: var(--accent-red);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 4px var(--sp-6);
+  flex-shrink: 0;
+}
+
+/* Grids de vista */
+.grid {
+  display: grid;
+  gap: var(--sp-3);
+  height: 100%;
+  padding: var(--sp-3);
+}
+
+.grid--v01 {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.grid--v02 {
+  grid-template-columns: 3fr 1.2fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.grid--v03 {
+  grid-template-columns: 1fr 1.8fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+/* Vistas inactivas: ocultas pero montadas (preserva mapa Leaflet / charts) */
+.view-canvas[hidden] { display: none; }
+
+/* Toast de feedback de interacción */
+.toast {
+  position: absolute;
+  bottom: var(--sp-6);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--chrome-bg-top);
+  color: var(--chrome-text);
+  border: 1px solid var(--brand-yellow);
+  border-radius: var(--radius-pill);
+  padding: var(--sp-3) var(--sp-7);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  pointer-events: none;
+}
+.toast[hidden] { display: none; }
